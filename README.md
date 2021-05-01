@@ -10,23 +10,23 @@
 ### 1.1. 과제 진행 요구사항
 |상세|구현 방법|비고|
 |:---|---|---|
-|•미션은 https://github.com/next-step/java-baseball-precourse 저장소를 fork/clone해 시작한다.|[x] fork <br> [x] clone||
-|•기능을 구현하기 전에 java-baseball/README.md 파일에 구현할 기능 목록을 정리해 추가한다. |[x] 요구사항 최초 정리||
-|•git의 commit 단위는 앞 단계에서 README.md 파일에 정리한 기능 목록 단위로 추가한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;•AngularJS Commit Message Conventions 참고해 commit log를 남긴다.|[x] AngularJS Commit<br>&nbsp;&nbsp;&nbsp;&nbsp;Message Conventions 참고||
-|•과제 진행 및 제출 방법은 프리코스 과제 제출 문서를 참고한다.|[ ] 과제 제출 문서 참고<br>[ ] 과제 제출|•2021년<br>&nbsp;5월 4일(화)<br>&nbsp;23시 59분까지 <br>&nbsp;GitHub을 통한<br>&nbsp;**미션 제출**과 **메일** 완료|
+|•미션은 https://github.com/next-step/java-baseball-precourse 저장소를 fork/clone해 시작한다.|- fork <br> - clone||
+|•기능을 구현하기 전에 java-baseball/README.md 파일에 구현할 기능 목록을 정리해 추가한다. |- 요구사항 최초 정리||
+|•git의 commit 단위는 앞 단계에서 README.md 파일에 정리한 기능 목록 단위로 추가한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;•AngularJS Commit Message Conventions 참고해 commit log를 남긴다.|- AngularJS Commit<br>&nbsp;&nbsp;&nbsp;&nbsp;Message Conventions 참고||
+|•과제 진행 및 제출 방법은 프리코스 과제 제출 문서를 참고한다.|- 과제 제출 문서 참고<br>- 과제 제출|•2021년<br>&nbsp;5월 4일(화)<br>&nbsp;23시 59분까지 <br>&nbsp;GitHub을 통한<br>&nbsp;**미션 제출**과 **메일** 완료|
 
 ### 1.2. 프로그래밍 요구사항
 |구분|상세|구현 방법|비고|
 |:---:|:---|---|---|
-|메소드 분리|• 자바 코드 컨벤션을 지키면서 프로그래밍한다.<br>&nbsp;&nbsp;• https://naver.github.io/hackday-conventions-java/|[ ] gradle-editorconfig 적용<br>[ ] gradle-checkstyle 적용<br>[ ] IntelliJ 적용<br>[ ] Github 적용||
-| |• indent(인덴트, 들여쓰기) depth를 2가 넘지 않도록 구현한다. 1까지만 허용한다.<br>&nbsp;&nbsp;• 예를 들어 while문 안에 if문이 있으면 들여쓰기는 2이다.<br>&nbsp;&nbsp;• **힌트: indent(인덴트, 들여쓰기) depth를 줄이는 좋은 방법은 함수(또는 메소드)를 분리**하면 된다.|[ ] < 2depth 규칙||
-| |• 자바 8에 추가된 stream api를 사용하지 않고 구현해야 한다. 단, 람다는 사용 가능하다.|[ ] stream api 사용하지 말 것||
-| |• else 예약어를 쓰지 않는다.<br>&nbsp;&nbsp;• 힌트: if 조건절에서 값을 return하는 방식으로 구현하면 else를 사용하지 않아도 된다.<br>&nbsp;&nbsp;• else를 쓰지 말라고 하니 switch/case로 구현하는 경우가 있는데 switch/case도 허용하지 않는다.|[ ] else 예약어 금지||
-| |• 함수(또는 메소드)의 길이가 10라인을 넘어가지 않도록 구현한다.<br>&nbsp;&nbsp;• 함수(또는 메소드)가 한 가지 일만 잘 하도록 구현한다.|[ ] 함수(또는 메서드) 10라인 이하||
-|단위 테스트|• 로직에 단위 테스트를 구현한다. 단, UI(System.out, System.in, Scanner) 로직은 제외 <br>&nbsp;&nbsp;• 핵심 로직을 구현하는 코드와 UI를 담당하는 로직을 구분한다.|[ ] 핵심 로직 단위테스트||
-| |• JUnit5와 AssertJ 사용법에 익숙하지 않은 개발자는 첨부한 "학습테스트를 통해 JUnit 학습하기.pdf"<br>&nbsp;&nbsp;문서를 참고해 사용법을 익힌 후 JUnit5 기반 단위 테스트를 구현한다.|[x] 사용법 학습||
-|일급콜렉션|• 일급콜렉션을 활용해 구현한다. [참고문서](https://developerfarm.wordpress.com/2012/02/01/object_calisthenics_/) |[ ] 사용법 학습 | |
-|패키징|• 모든 원시값과 문자열을 포장한다. [참고문서](https://developerfarm.wordpress.com/2012/01/27/object_calisthenics_4) |[ ] 사용법 학습 | | 
+|메소드 분리|• 자바 코드 컨벤션을 지키면서 프로그래밍한다.<br>&nbsp;&nbsp;• https://naver.github.io/hackday-conventions-java/|- gradle-editorconfig 적용<br>- gradle-checkstyle 적용<br>- IntelliJ 적용<br>- Github 적용||
+| |• indent(인덴트, 들여쓰기) depth를 2가 넘지 않도록 구현한다. 1까지만 허용한다.<br>&nbsp;&nbsp;• 예를 들어 while문 안에 if문이 있으면 들여쓰기는 2이다.<br>&nbsp;&nbsp;• **힌트: indent(인덴트, 들여쓰기) depth를 줄이는 좋은 방법은 함수(또는 메소드)를 분리**하면 된다.|- < 2depth 규칙||
+| |• 자바 8에 추가된 stream api를 사용하지 않고 구현해야 한다. 단, 람다는 사용 가능하다.|- stream api 사용하지 말 것||
+| |• else 예약어를 쓰지 않는다.<br>&nbsp;&nbsp;• 힌트: if 조건절에서 값을 return하는 방식으로 구현하면 else를 사용하지 않아도 된다.<br>&nbsp;&nbsp;• else를 쓰지 말라고 하니 switch/case로 구현하는 경우가 있는데 switch/case도 허용하지 않는다.|- else 예약어 금지||
+| |• 함수(또는 메소드)의 길이가 10라인을 넘어가지 않도록 구현한다.<br>&nbsp;&nbsp;• 함수(또는 메소드)가 한 가지 일만 잘 하도록 구현한다.|- 함수(또는 메서드) 10라인 이하||
+|단위 테스트|• 로직에 단위 테스트를 구현한다. 단, UI(System.out, System.in, Scanner) 로직은 제외 <br>&nbsp;&nbsp;• 핵심 로직을 구현하는 코드와 UI를 담당하는 로직을 구분한다.|- 핵심 로직 단위테스트||
+| |• JUnit5와 AssertJ 사용법에 익숙하지 않은 개발자는 첨부한 "학습테스트를 통해 JUnit 학습하기.pdf"<br>&nbsp;&nbsp;문서를 참고해 사용법을 익힌 후 JUnit5 기반 단위 테스트를 구현한다.|- 사용법 학습||
+|일급콜렉션|• 일급콜렉션을 활용해 구현한다. [참고문서](https://developerfarm.wordpress.com/2012/02/01/object_calisthenics_/) |- 사용법 학습 | |
+|패키징|• 모든 원시값과 문자열을 포장한다. [참고문서](https://developerfarm.wordpress.com/2012/01/27/object_calisthenics_4) |- 사용법 학습 | | 
 
 ### 1.3. 기능 요구사항
 |상세|구현 방법|비고|
@@ -76,15 +76,19 @@ pobi, honux가 최종 우승했습니다.
 >>Cycle : Test Fail ---> Test Passes ---> Refactor ---> Test Fail ---> ... 
 
 ### 2.2. Todo List
-- [ ] 1.자바 코드 컨벤션을 위한 세팅
-  - [ ] 1-1.gradle-editorconfig 적용
-  - [ ] 1-2.gradle-checkstyle 적용
-  - [ ] 1-3.IntelliJ 적용
-  - [ ] 1-4.Github 적용
+- [x] 0.기본 세팅
+  - [x] 0-1. git fork/clone
+  - [x] 0-2. 요구사항 정리
+  - [x] 0-3. AngularJS Commit Message Conventions 참고
+- [x] 1.자바 코드 컨벤션을 위한 세팅
+  - [x] 1-1.gradle-editorconfig 적용
+  - [x] 1-2.gradle-checkstyle 적용
+  - [x] 1-3.IntelliJ 적용
+  - [x] 1-4.Github 적용
 - [ ] 2.학습
-  - [ ] 2-1.일급콜렉션
-  - [ ] 2-2.패키징:모든 원시값과 문자열을 포장한다.
-  - [ ] 2-3.TDD 동영상 학습
+  - [x] 2-1.일급콜렉션
+  - [x] 2-2.패키징:모든 원시값과 문자열을 포장한다.
+  - [x] 2-3.TDD 동영상 학습
   - [ ] 2-4.DDD(도메인 주도 설계) 찾아보기
 - [ ] 3.분석 및 설계(DDD, Domain-Driven Design)
   - [ ] 3-1.Domain 구분
