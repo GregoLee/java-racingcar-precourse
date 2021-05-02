@@ -9,8 +9,7 @@ import exception.IllegalCarNameException;
 public class CarGroup {
 	private List<Car> cars = new ArrayList<>();
 
-	public static CarGroup generate(String carGroupStr) throws IllegalCarNameException {
-		String[] carNames = carGroupStr.split(",");
+	public static CarGroup generate(String[] carNames) throws IllegalCarNameException {
 		CarGroup carGroup = CarGroup.generate();
 		for (String carName : carNames) {
 			carGroup.getCars().add(new Car(carName));
@@ -67,7 +66,7 @@ public class CarGroup {
 		StringBuilder msg = new StringBuilder();
 		for (int i = 0; i < winners.size(); i++) {
 			String winnerName = winners.get(i).getCarName().getName();
-			msg.append((i == winners.size()-1) ? winnerName : winnerName + ", ");
+			msg.append((i == winners.size() - 1) ? winnerName : winnerName + ", ");
 		}
 		msg.append("가 최종 우승했습니다.");
 		return msg.toString();

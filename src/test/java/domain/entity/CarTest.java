@@ -88,15 +88,16 @@ public class CarTest {
 	@ParameterizedTest(name = "{index} - 이름A : {0}, 이름B : {1}, 거리A : {2}, 거리B : {3}, 예상결과 : {4}")
 	@Order(7)
 	@CsvSource(value = {"A;가;1;2;-1", "AB;가나;2;2;0", "ABC;가나다;3;2;1"}, delimiter = ';')
-	public void carCompareTo(String carNameA, String carNameB, int carADistance, int carBDistance, int expectedResult) throws IllegalCarNameException {
+	public void carCompareTo(String carNameA, String carNameB, int carADistance, int carBDistance,
+		int expectedResult) throws IllegalCarNameException {
 		Car carA = new Car(carNameA);
-		for(; 0 < carADistance; carADistance--) {
+		for (; 0 < carADistance; carADistance--) {
 			carA.calculateDistance(GoStopCode.GO);
 		}
 		System.out.println(carA.makeMsg());
 
 		Car carB = new Car(carNameB);
-		for(; 0 < carBDistance; carBDistance--) {
+		for (; 0 < carBDistance; carBDistance--) {
 			carB.calculateDistance(GoStopCode.GO);
 		}
 		System.out.println(carB.makeMsg());
