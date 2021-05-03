@@ -13,7 +13,8 @@ public class RoundInput {
 		return round;
 	}
 
-	public static RoundInput generate(String input) throws IllegalRoundInputException {
+	public static RoundInput generate(String input)
+		throws IllegalRoundInputException, NumberFormatException {
 		RoundInput roundInput = new RoundInput();
 		int round = parseInt(input);
 		validateRound(round);
@@ -30,7 +31,7 @@ public class RoundInput {
 	private static int parseInt(String input) {
 		try {
 			return Integer.parseInt(input);
-		} catch(NumberFormatException e) {
+		} catch (NumberFormatException e) {
 			throw new NumberFormatException("라운드 횟수는 1 ~ Integer.MAX_VALUE 사이 자연수로 입력해주세요.");
 		}
 	}
