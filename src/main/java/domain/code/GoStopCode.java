@@ -6,19 +6,19 @@ public enum GoStopCode {
 	GO, STOP;
 
 	public boolean isGo() {
-		return GoStopCode.GO == this;
+		return GO == this;
 	}
 
 	public boolean isStop() {
-		return GoStopCode.STOP == this;
+		return STOP == this;
 	}
 
 	public static GoStopCode distinguishGoStop(int num) throws IllegalRandomIntegerValueException {
 		if (3 < num && num < 10) {
-			return GoStopCode.GO;
+			return GO;
 		}
 		if (-1 < num && num < 4) {
-			return GoStopCode.STOP;
+			return STOP;
 		}
 		throw new IllegalRandomIntegerValueException("0~9 사이의 랜덤한 정수의 값으로만 자동차가 전진(Go), 정지(Stop) 여부를 판별할 수 있습니다.");
 	}
@@ -28,6 +28,10 @@ public enum GoStopCode {
 	}
 
 	public static GoStopCode getRandomGoStopCode() throws IllegalRandomIntegerValueException {
-		return distinguishGoStop(randomInteger0To9());
+		try {
+			return distinguishGoStop(randomInteger0To9());
+		} catch (IllegalRandomIntegerValueException e) {
+			throw new IllegalRandomIntegerValueException("0~9 사이의 랜덤한 정수 값이 들어오지 않았습니다. 시스템 오류로 게임을 종료합니다.");
+		}
 	}
 }

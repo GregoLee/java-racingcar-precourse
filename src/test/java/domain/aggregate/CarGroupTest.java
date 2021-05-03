@@ -15,6 +15,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import domain.entity.Car;
 import exception.IllegalCarNameException;
+import exception.IllegalRandomIntegerValueException;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class CarGroupTest {
@@ -59,5 +60,20 @@ public class CarGroupTest {
 	public void makeMsgInRacing() {
 		String expectedMsg = "pobi : -----\ncrong : ----\nhonux : -----\n";
 		assertThat(this.preparedCarGroup.makeMsgInRacing()).isEqualTo(expectedMsg);
+	}
+
+	@DisplayName("자동차_그룹_라운드_5회_실행")
+	@ParameterizedTest(name = "{index} - 자동차이름 : {0}")
+	@Order(5)
+	@CsvSource(value = {"A,AB,ABC,ABCD,ACBDE;5", "A,AB,ABC,ABCD,ACBDE,가,가나,가나다,가나다라,가나다라마;10"}, delimiter = ';')
+	public void playRound(String carGroupStr, int rounds) throws
+		IllegalCarNameException,
+		IllegalRandomIntegerValueException {
+		CarGroup carGroup = CarGroup.generate(carGroupStr.split(","));
+		for (int i = 0; i < rounds; i++) {
+			carGroup.playRound();
+			System.out.println(carGroup.makeMsgInRacing());
+		}
+		System.out.println(carGroup.makeMsgWinners());
 	}
 }

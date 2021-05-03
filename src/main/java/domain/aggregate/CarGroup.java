@@ -3,8 +3,10 @@ package domain.aggregate;
 import java.util.ArrayList;
 import java.util.List;
 
+import domain.code.GoStopCode;
 import domain.entity.Car;
 import exception.IllegalCarNameException;
+import exception.IllegalRandomIntegerValueException;
 
 public class CarGroup {
 	private List<Car> cars = new ArrayList<>();
@@ -52,11 +54,11 @@ public class CarGroup {
 			winners.add(car);
 			return;
 		}
-		if (car.compareTo(winners.get(0)) == 1) {
-			winners.clear();
+		if (car.compareTo(winners.get(0)) == 0) {
 			winners.add(car);
 		}
-		if (car.compareTo(winners.get(0)) == 0) {
+		if (car.compareTo(winners.get(0)) == 1) {
+			winners.clear();
 			winners.add(car);
 		}
 	}
@@ -78,5 +80,11 @@ public class CarGroup {
 			msg.append(car.makeMsg()).append("\n");
 		}
 		return msg.toString();
+	}
+
+	public void playRound() throws IllegalRandomIntegerValueException {
+		for (Car car : this.cars) {
+			car.calculateDistance(GoStopCode.getRandomGoStopCode());
+		}
 	}
 }
