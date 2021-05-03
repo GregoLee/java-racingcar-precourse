@@ -11,12 +11,10 @@ import exception.IllegalRandomIntegerValueException;
 import exception.IllegalRoundInputException;
 
 public class RacingCarUI {
-
 	private CarGroup carGroup = null;
 	private DisplayCode displayCode = DisplayCode.ENTERING_CARS;
 	private RacingCarIO racingCarIO = new RacingCarIO();
 	private RoundInput roundInput = null;
-
 
 	public void selectDisplay() throws IllegalRandomIntegerValueException {
 		while (!this.displayCode.isEndGame()) {

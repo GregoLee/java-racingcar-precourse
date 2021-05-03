@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class RacingCarIO {
-
 	private InputStreamReader inputStreamReader = new InputStreamReader(System.in);
 	private BufferedReader bufferedReader = new BufferedReader(this.inputStreamReader);
 

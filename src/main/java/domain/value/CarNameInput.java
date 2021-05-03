@@ -5,6 +5,14 @@ import exception.IllegalCarNameException;
 public class CarNameInput {
 	private String[] carNames;
 
+	private void setCarNames(String[] tempCarNames) {
+		this.carNames = tempCarNames;
+	}
+
+	public String[] getCarNames() {
+		return this.carNames;
+	}
+
 	public static CarNameInput generate(String input) throws IllegalCarNameException {
 		CarNameInput carNameInput = new CarNameInput();
 		String[] tempCarNames = input.split(",");
@@ -36,13 +44,5 @@ public class CarNameInput {
 		if (carName.length() < 1) {
 			throw new IllegalCarNameException("자동차 이름은 반드시 필요합니다.");
 		}
-	}
-
-	private void setCarNames(String[] tempCarNames) {
-		this.carNames = tempCarNames;
-	}
-
-	public String[] getCarNames() {
-		return this.carNames;
 	}
 }

@@ -3,7 +3,6 @@ package domain.value;
 import exception.IllegalCarNameException;
 
 public class CarName {
-
 	private String name;
 
 	private CarName(String input) {

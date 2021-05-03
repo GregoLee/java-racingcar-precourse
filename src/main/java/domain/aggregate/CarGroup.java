@@ -11,24 +11,24 @@ import exception.IllegalRandomIntegerValueException;
 public class CarGroup {
 	private List<Car> cars = new ArrayList<>();
 
-	public static CarGroup generate(String[] carNames) throws IllegalCarNameException {
-		CarGroup carGroup = CarGroup.generate();
-		for (String carName : carNames) {
-			carGroup.getCars().add(new Car(carName));
-		}
-		return carGroup;
-	}
-
 	List<Car> getCars() {
 		return this.cars;
+	}
+
+	public int size() {
+		return this.cars.size();
 	}
 
 	private static CarGroup generate() {
 		return new CarGroup();
 	}
 
-	public int size() {
-		return this.cars.size();
+	public static CarGroup generate(String[] carNames) throws IllegalCarNameException {
+		CarGroup carGroup = CarGroup.generate();
+		for (String carName : carNames) {
+			carGroup.getCars().add(new Car(carName));
+		}
+		return carGroup;
 	}
 
 	private List<Car> findWinners() {
@@ -50,12 +50,9 @@ public class CarGroup {
 	 * @param car
 	 */
 	private void calculateWinner(List<Car> winners, Car car) {
-		if (winners.size() == 0) {
+		if (winners.size() == 0 || car.compareTo(winners.get(0)) == 0) {
 			winners.add(car);
 			return;
-		}
-		if (car.compareTo(winners.get(0)) == 0) {
-			winners.add(car);
 		}
 		if (car.compareTo(winners.get(0)) == 1) {
 			winners.clear();
